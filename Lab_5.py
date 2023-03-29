@@ -97,10 +97,10 @@ def main():
             if test[0].upper() in check:
                 if test[0].upper() == 'INC':
                     var1= inc(var1)
-                    print(var1)
+                    output = var1
                 elif test[0].upper() == 'DEC':
                     var1 = dec(var1)
-                    print(var1)
+                    output = var1
 
                 else:print("Ошибка")
             else:
@@ -113,11 +113,20 @@ def main():
                 if test[0].upper() == 'ADD':
                     if test[1].upper() == name_var1 and test[2].upper() == name_var2:
                         var1 = add(var1,var2)
+                        output =var1
                     elif test[1].upper() == name_var2 and test[2].upper() == name_var1:
                         var2 = add(var2,var1)
+                        output=var2
                     else: print("Ошибка значений")
 
-
+                elif test[0].upper() == 'SUB':
+                    if test[1].upper() == name_var1 and test[2].upper() == name_var2:
+                        var1 = sub(var1,var2)
+                        output =var1
+                    elif test[1].upper() == name_var2 and test[2].upper() == name_var1:
+                        var2 = sub(var2,var1)
+                        output=var2
+                    else: print("Ошибка значений")
 
                 else: print("Неверная операция")
 
@@ -128,20 +137,21 @@ def main():
                 if test[0].upper() == 'INC':
                     if test[1].upper() == name_var1:
                         var1 = inc(var1)
-                        print(var1)
+                        output = var1
                     elif test[1].upper() == name_var2:
                         var2 = inc(var2)
-                        print(var2)
+                        output = var2
                     else:print("Ошибка")
                 elif test[0].upper() == 'DEC':
                     if test[1].upper() == name_var1:
                         var1 = dec(var1)
-                        print(var1)
+                        output =var1
                     elif test[1].upper() == name_var2:
                         var2 = dec(var2)
-                        print(var2)
+                        output = var2
                     else:print("Ошибка")
-        else: print(var3)
+
+        print(output)
 
 
 
